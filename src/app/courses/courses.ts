@@ -15,6 +15,7 @@ export class CoursesComponent {
 
   getcourses = inject(CoursesService);
 
+  //Körs när komponenten startar
   ngOnInit() {
     this.loadCourses();
   }
