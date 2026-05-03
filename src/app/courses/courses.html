@@ -16,7 +16,17 @@
         <th>Progression:</th>
         <th>Kurslänk:</th>
     </tr>
+
+    @for(course of courses(); track course.code) {
+        <tr>
+            <td>{{ course.code }}</td>
+            <td>{{ course.coursename }}</td>
+            <td>{{ course.progression }}</td>
+            <td><a [href]="course.syllabus" target="_blank">Kursinformation</a></td>   <!--blank öppnar länk i ny flik-->
+        </tr>
+    }
 </table>
+
 </main>
 <footer>
     <h3>Kurssidan</h3>
