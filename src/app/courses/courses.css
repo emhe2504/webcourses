@@ -54,8 +54,13 @@ table th {
     text-align: left;
 }
 
+table td a {
+    color: #0578eb;
+}
+
 table td {
     text-align: left;
+    color: #003161;
 }
 
 footer {
