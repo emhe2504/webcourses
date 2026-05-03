@@ -28,7 +28,7 @@ export class CoursesComponent {
 
     } catch (error) {
       console.log(error);
-      this.error.set("Data kunde inte laddas, prova igen om en stund");
+      this.error.set("Data kunde inte laddas, prova igen om en stund.");
     }
   }
 }

@@ -4,6 +4,11 @@
 <main>
 <h2>Kurser</h2>
 <p>Nedan listas alla kurser som läses på MittUniversitetets webbutvecklingsprogram.</p>
+
+@if(error()) {
+    <p id="errorMessage">{{ error() }}</p>
+}
+
 <table id="courseTable">
     <tr>
         <th>Kurskod:</th>
