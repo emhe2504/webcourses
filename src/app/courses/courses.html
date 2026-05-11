@@ -5,6 +5,18 @@
     <p id="errorMessage">{{ error() }}</p>
 }
 
+<form>
+    <label for="sortCourses">Sortera kurser: </label>
+    <select name="sortCourses" id="sortCourses">
+        <option value="byCode">Kurskod bokstavsordning</option>
+        <option value="byName">Kursnamn bokstavsordning</option>
+        <option value="byProgression">Progression bokstavsordning</option>
+    </select>
+    <br>
+    <label for="filterCourses">Filtrera kurser genom sökfras: </label>
+    <input type="text" id="filterCourses">
+</form>
+
 <div id="table-wrapper">
 <table id="courseTable">
     <tr>
