@@ -2,12 +2,13 @@
 <p>Nedan listas alla kurser som läses på MittUniversitetets webbutvecklingsprogram.</p>
 
 @if(error()) {
-    <p id="errorMessage">{{ error() }}</p>
+<p id="errorMessage">{{ error() }}</p>
 }
 
 <form>
     <label for="sortCourses">Sortera kurser: </label>
-    <select name="sortCourses" id="sortCourses" [value]="sortChoice()" (change)="sortChoice.set($any($event.target).value)">
+    <select name="sortCourses" id="sortCourses" [value]="sortChoice()"
+        (change)="sortChoice.set($any($event.target).value)">
         <option value="normal">Sortera.. </option>
         <option value="byCode">Kurskod bokstavsordning</option>
         <option value="byName">Kursnamn bokstavsordning</option>
@@ -15,25 +16,26 @@
     </select>
     <br>
     <label for="filterCourses">Filtrera kurser genom sökfras: </label>
-    <input type="text" id="filterCourses" placeholder="Sökfras.." [value]="searchPhrase()" (input)="searchPhrase.set($any($event.target).value)">
+    <input type="text" id="filterCourses" placeholder="Sökfras.." [value]="searchPhrase()"
+        (input)="searchPhrase.set($any($event.target).value)">
 </form>
 
 <div id="table-wrapper">
-<table id="courseTable">
-    <tr>
-        <th>Kurskod:</th>
-        <th>Kursnamn:</th>
-        <th>Progression:</th>
-        <th>Kurslänk:</th>
-    </tr>
+    <table id="courseTable">
+        <tr>
+            <th>Kurskod:</th>
+            <th>Kursnamn:</th>
+            <th>Progression:</th>
+            <th>Kurslänk:</th>
+        </tr>
 
-    @for(course of sortCourses(); track course.code) {
+        @for(course of sortCourses(); track course.code) {
         <tr>
             <td>{{ course.code }}</td>
             <td>{{ course.coursename }}</td>
             <td>{{ course.progression }}</td>
-            <td><a [href]="course.syllabus" target="_blank">Kursinformation</a></td>   <!--blank öppnar länk i ny flik-->
+            <td><a [href]="course.syllabus" target="_blank">Kursinformation</a></td> <!--blank öppnar länk i ny flik-->
         </tr>
-    }
-</table>
+        }
+    </table>
 </div>
