@@ -14,7 +14,7 @@
     </select>
     <br>
     <label for="filterCourses">Filtrera kurser genom sökfras: </label>
-    <input type="text" id="filterCourses">
+    <input type="text" id="filterCourses" placeholder="Sökfras.." [value]="searchPhrase()" (input)="searchPhrase.set($any($event.target).value)">
 </form>
 
 <div id="table-wrapper">
@@ -26,7 +26,7 @@
         <th>Kurslänk:</th>
     </tr>
 
-    @for(course of courses(); track course.code) {
+    @for(course of filterCourses(); track course.code) {
         <tr>
             <td>{{ course.code }}</td>
             <td>{{ course.coursename }}</td>
