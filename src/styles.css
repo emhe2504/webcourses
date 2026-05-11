@@ -1,1 +1,110 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    background-color: white;
+    letter-spacing: 1px;
+}
+
+.gluten {
+    font-family: "Gluten", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
+}
+
+header {
+    display: block;
+    background-color: #3B7597;
+}
+
+h1 {
+    font-size: 35px;
+    font-weight: bold;
+    padding: 2%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    margin: 0;
+    color: #EEEEEE;
+}
+
+main {
+    width: 65%;
+    margin: 4% auto;
+}
+
+footer {
+    background-color: #3B7597;
+    margin: 0;
+}
+
+h3 {
+    text-align: center;
+    margin: 0;
+    padding: 1%;
+    padding-top: 3%;
+    color: #EEEEEE;
+}
+
+p {
+    text-align: center;
+    color: #EEEEEE;
+}
+
+app-root {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 100%;
+    min-height: 100vh;
+}
+
+@media screen and (max-width: 1250px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    main {
+        width: 75%;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    main {
+        width: 85%;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    body {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    main {
+        width: 95%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    h1 {
+        font-size: 20px;
+        padding-top: 6%;
+        padding-bottom: 6%;
+
+    }
+}

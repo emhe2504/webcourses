@@ -1,0 +1,78 @@
+h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    color: #003161;
+}
+
+p {
+    text-align: center;
+    padding-bottom: 2%;
+    color: #003161;
+    margin: 0;
+}
+
+form {
+    margin: 2%;
+    line-height: 2em;
+}
+
+table {
+    width: 100%;
+    margin: 2% auto;
+    line-height: 2em;
+    padding: 2%;
+    background-color: #a5cce9;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0 rgb(233, 233, 233);
+}
+
+table th {
+    text-align: left;
+}
+
+table td a {
+    color: #0578eb;
+}
+
+table td {
+    text-align: left;
+    color: #003161;
+}
+
+@media screen and (max-width: 1250px) {
+
+    h2 {
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    h2 {
+        font-size: 20px;
+    }
+
+    #table-wrapper {
+        overflow-x: auto;
+    }
+
+    table {
+        border-spacing: 10px 0;
+    }
+
+    table th,
+    table td {
+        padding-bottom: 2%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    h2 {
+        font-size: 18px;
+    }
+
+}
