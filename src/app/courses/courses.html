@@ -7,7 +7,8 @@
 
 <form>
     <label for="sortCourses">Sortera kurser: </label>
-    <select name="sortCourses" id="sortCourses">
+    <select name="sortCourses" id="sortCourses" [value]="sortChoice()" (change)="sortChoice.set($any($event.target).value)">
+        <option value="normal">Sortera.. </option>
         <option value="byCode">Kurskod bokstavsordning</option>
         <option value="byName">Kursnamn bokstavsordning</option>
         <option value="byProgression">Progression bokstavsordning</option>
@@ -26,7 +27,7 @@
         <th>Kurslänk:</th>
     </tr>
 
-    @for(course of filterCourses(); track course.code) {
+    @for(course of sortCourses(); track course.code) {
         <tr>
             <td>{{ course.code }}</td>
             <td>{{ course.coursename }}</td>

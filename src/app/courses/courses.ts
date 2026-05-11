@@ -27,6 +27,29 @@ export class CoursesComponent {
     )
   });
 
+  sortChoice = signal("normal");
+
+
+  sortCourses = computed(() => {
+    const coursesCopy = Array.from(this.filterCourses()); //Ny array med värden, inte ändra orginalvärden
+    const value = this.sortChoice();  //Det val vi gjort i listan
+
+    if (value === "byCode") {
+      return coursesCopy.sort((a, b) => a.code.localeCompare(b.code));  //sortera på kurskod
+    }
+
+    if (value === "byName") {
+      return coursesCopy.sort((a, b) => a.coursename.localeCompare(b.coursename));  //sortera på kursnamn
+    }
+
+    if (value === "byProgression") {
+      return coursesCopy.sort((a, b) => a.progression.localeCompare(b.progression));  //sortera på progression
+    }
+
+    return coursesCopy;   //Annars orginalordning
+
+  });
+
   getcourses = inject(CoursesService);
 
   //Körs när komponenten startar
